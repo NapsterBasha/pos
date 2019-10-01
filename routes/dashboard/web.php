@@ -8,6 +8,11 @@ Route::group(
 
             Route::get('/index','DashboardController@index')->name('index');
 
+
+
+            //User Routes
+            Route::Resource('user','UserController')->except(['show']);
+
         });//end of dashboard
 
     });
